@@ -1,2 +1,0 @@
-# tpAchatProject
-Tp Project Devops
