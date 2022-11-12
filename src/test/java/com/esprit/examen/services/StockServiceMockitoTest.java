@@ -52,8 +52,6 @@ public class StockServiceMockitoTest {
 		Stock s1 = stockService.retrieveStock(2L);
 		Assertions.assertNotNull(s1);
 		System.out.println("working retrieve MOCKITO !");
-
-
 	}
 	@Test
 	public void testaddStock() {
