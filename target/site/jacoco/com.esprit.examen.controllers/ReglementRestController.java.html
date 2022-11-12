@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="fr"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ReglementRestController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">tpAchatProject</a> &gt; <a href="index.source.html" class="el_package">com.esprit.examen.controllers</a> &gt; <span class="el_source">ReglementRestController.java</span></div><h1>ReglementRestController.java</h1><pre class="source lang-java linenums">package com.esprit.examen.controllers;
+
+import java.util.Date;
+import java.util.List;
+
+import com.esprit.examen.entities.Facture;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.web.bind.annotation.*;
+
+import com.esprit.examen.entities.Reglement;
+import com.esprit.examen.services.IReglementService;
+
+import io.swagger.annotations.Api;
+
+@RestController
+@Api(tags = &quot;Gestion des reglements&quot;)
+@RequestMapping(&quot;/reglement&quot;)
+@CrossOrigin(&quot;*&quot;)
+<span class="nc" id="L20">public class ReglementRestController {</span>
+
+    @Autowired
+    IReglementService reglementService;
+
+
+    // http://localhost:8089/SpringMVC/reglement/add-reglement
+    @PostMapping(&quot;/add-reglement&quot;)
+    @ResponseBody
+    public Reglement addReglement(@RequestBody Reglement r) {
+<span class="nc" id="L30">        Reglement reglement = reglementService.addReglement(r);</span>
+<span class="nc" id="L31">        return reglement;</span>
+    }
+    @GetMapping(&quot;/retrieve-all-reglements&quot;)
+    @ResponseBody
+    public List&lt;Reglement&gt; getReglement() {
+<span class="nc" id="L36">        List&lt;Reglement&gt; list = reglementService.retrieveAllReglements();</span>
+<span class="nc" id="L37">        return list;</span>
+    }
+
+    // http://localhost:8089/SpringMVC/reglement/retrieve-reglement/8
+    @GetMapping(&quot;/retrieve-reglement/{reglement-id}&quot;)
+    @ResponseBody
+    public Reglement retrieveReglement(@PathVariable(&quot;reglement-id&quot;) Long reglementId) {
+<span class="nc" id="L44">        return reglementService.retrieveReglement(reglementId);</span>
+    }
+
+    // http://localhost:8089/SpringMVC/reglement/retrieveReglementByFacture/8
+    @GetMapping(&quot;/retrieveReglementByFacture/{facture-id}&quot;)
+    @ResponseBody
+    public List&lt;Reglement&gt; retrieveReglementByFacture(@PathVariable(&quot;facture-id&quot;) Long factureId) {
+<span class="nc" id="L51">        return reglementService.retrieveReglementByFacture(factureId);</span>
+    }
+
+    // http://localhost:8089/SpringMVC/reglement/getChiffreAffaireEntreDeuxDate/{startDate}/{endDate}
+    @GetMapping(value = &quot;/getChiffreAffaireEntreDeuxDate/{startDate}/{endDate}&quot;)
+    public float getChiffreAffaireEntreDeuxDate(
+            @PathVariable(name = &quot;startDate&quot;) @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) Date startDate,
+            @PathVariable(name = &quot;endDate&quot;) @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) Date endDate) {
+        try {
+<span class="nc" id="L60">            return reglementService.getChiffreAffaireEntreDeuxDate(startDate, endDate);</span>
+<span class="nc" id="L61">        } catch (Exception e) {</span>
+<span class="nc" id="L62">            return 0;</span>
+        }
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>
