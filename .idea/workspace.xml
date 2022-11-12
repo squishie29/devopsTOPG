@@ -7,10 +7,6 @@
     <list default="true" id="f7ae0a72-da8a-477b-b8f9-8df636afb435" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/jacoco.exec" beforeDir="false" afterPath="$PROJECT_DIR$/target/jacoco.exec" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco-sessions.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/jacoco-sessions.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/jacoco.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tpAchatProject-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/tpAchatProject-1.0.jar" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,7 +144,7 @@
       <updated>1668263509322</updated>
       <workItem from="1668263511640" duration="5885000" />
       <workItem from="1668271318713" duration="656000" />
-      <workItem from="1668271983039" duration="8235000" />
+      <workItem from="1668271983039" duration="9066000" />
     </task>
     <servers />
   </component>
@@ -177,10 +173,10 @@
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/devopsTOPG$StockServiceMockitoTest.ic" NAME="StockServiceMockitoTest Coverage Results" MODIFIED="1668282225431" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/devopsTOPG$StockServiceMockitoTest.ic" NAME="StockServiceMockitoTest Coverage Results" MODIFIED="1668283460374" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.esprit.examen.services.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/devopsTOPG$StockServiceMockitoTest_testretrieveStock.ic" NAME="StockServiceMockitoTest.testretrieveStock Coverage Results" MODIFIED="1668282903973" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/devopsTOPG$StockServiceMockitoTest_testretrieveStock.ic" NAME="StockServiceMockitoTest.testretrieveStock Coverage Results" MODIFIED="1668283425709" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.esprit.examen.services.*</FILTER>
     </SUITE>
   </component>
