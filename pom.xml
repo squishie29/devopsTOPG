@@ -133,7 +133,7 @@
 		<repository>
 			<id>deploymentRepo</id>
 			<name>admin</name>
-			<url>http://192.168.57.249:8081/repository/maven-releases/</url>
+			<url>http://192.168.112.249:8081/repository/maven-releases/</url>
 		</repository>
 	</distributionManagement>
 </project>
